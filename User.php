@@ -1,9 +1,9 @@
 <?php
 class User {
-    public $firstName;
-    public $lastName;
-    public $phoneNumber;
-    public $address;
+    private $firstName;
+    private $lastName;
+    private $phoneNumber;
+    private $address;
 
     public function __construct($fName, $lName, $phone, $addr) {
         $this->firstName = htmlspecialchars($fName);
@@ -14,6 +14,22 @@ class User {
 
     public function getFullName() {
         return $this->firstName . " " . $this->lastName;
+    }
+
+    public function getPhoneNumber() {
+        return $this->phoneNumber;
+    }
+
+    public function getAddress() {
+        return $this->address;
+    }
+
+    public function getUserInfo() {
+        return [
+            "nama" => $this->getFullName(),
+            "phone" => $this->phoneNumber,
+            "alamat" => $this->address
+        ];
     }
 }
 ?>
