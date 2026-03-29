@@ -31,8 +31,8 @@
         echo "<div class='result'>";
         echo "<h3>Data Berhasil Disimpan</h3>";
         echo "<p>Hi, my name is <b>" . $user->getFullName() . "</b></p>";
-        echo "<p>Phone Number: " . $user->phoneNumber . "</p>";
-        echo "<p>Address: " . $user->address . "</p>";
+       echo "<p>Phone Number: " . $user->getPhoneNumber() . "</p>";
+        echo "<p>Address: " . $user->getAddress() . "</p>";
         echo "<a href='index.php'>Reset</a>";
         echo "</div>";
     }
